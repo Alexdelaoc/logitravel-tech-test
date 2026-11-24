@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical proof - Vanilla JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>This is a technical proof</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit mus primis nec inceptos. Lacinia
+        habitasse arcu molestie maecenas cursus quam nunc, hendrerit posuere augue fames dictumst
+        placerat porttitor, dis mi pharetra vestibulum venenatis phasellus.
+      </p>
+
+      <ul class="list" id="list" aria-label="Items"></ul>
+
+      <div class="actions">
+        <button type="button" class="btn btn-outline undo" id="undo-btn" aria-label="Undo">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 12a8 8 0 1 0 2.34-5.66L4 8.5" />
+            <path d="M4 4.5v4h4" />
+          </svg>
+        </button>
+        <button type="button" class="btn btn-outline" id="delete-btn">Delete</button>
+        <button type="button" class="btn btn-primary" id="add-btn">Add</button>
+      </div>
+    </main>
+
+    <dialog class="modal" id="add-dialog" aria-labelledby="add-label">
+      <form id="add-form">
+        <label id="add-label" for="add-input">Add item to list</label>
+        <input
+          id="add-input"
+          type="text"
+          placeholder="Type the text here..."
+          autocomplete="off"
+        />
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary" id="confirm-btn">Add</button>
+          <button type="button" class="btn btn-outline" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
